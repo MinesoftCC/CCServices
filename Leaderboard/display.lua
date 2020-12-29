@@ -1,5 +1,5 @@
 local json = require("json")
-local ip = "http://157.90.30.90/BankAPI"
+local ip = "http://127.0.0.1/BankAPI"
 local l_monitor = peripheral.wrap("left")
 local r_monitor = peripheral.wrap("right")
 
