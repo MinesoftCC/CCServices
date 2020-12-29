@@ -1,6 +1,6 @@
 while true
-local ip = "http://127.0.0.1/BankAPI/sendfunds/atm/" 
-local atm_pass = "atmpass123"
+local ip = "http://157.90.30.90/BankAPI/sendfunds/atm/" 
+local atm_pass = "atmbeepboop"
 local atm_id = 2
 local json = require("json")
 while not redstone.getInput("back") do os.sleep(0.1) end
@@ -36,6 +36,11 @@ if res["value"] then
     end
     turtle.turnLeft()
     turtle.turnLeft()
+    
+    --notification
+    redstone.setOutput("right", true)
+    os.sleep(1)
+    redstone.setOutput("right", false)
     --money has been deposited
 end
 end
