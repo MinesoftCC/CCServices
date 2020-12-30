@@ -41,7 +41,7 @@ while true do
         turtle.turnRight()
         for i = 1, 15 do
             turtle.select(i)
-            turtle.dropDown()
+            turtle.drop()
         end
         turtle.turnLeft()
         turtle.turnLeft()
