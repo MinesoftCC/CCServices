@@ -25,7 +25,10 @@ while true do
             turtle.drop()
         end
     end
-
+    
+    --optional fee example:
+    total = total*0.98
+    
     --attempt to send money
     if total ~= 0 then
         local res =
