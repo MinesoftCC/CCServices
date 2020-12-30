@@ -25,36 +25,35 @@ while true do
             turtle.drop()
         end
     end
-    
+
     --optional fee example:
-    --total = total - (total * 0.015625)
-    
+    --total = total - math.floor(total * 0.015625)
+
     --attempt to send money
-    if total ~= 0 then
-        local res =
-            json.decode(http.post(ip .. account_name .. "/" .. total .. "/" .. atm_id .. "/" .. atm_pass, ""):readAll())
 
-        --if it works then deposit diamonds
-        if res["value"] == 1 then
-            --money has been deposited
-            turtle.turnRight()
-            turtle.turnRight()
-            for i = 1, 15 do
-                turtle.select(i)
-                turtle.dropDown()
-            end
-            turtle.turnLeft()
-            turtle.turnLeft()
+    local res =
+        json.decode(http.post(ip .. account_name .. "/" .. total .. "/" .. atm_id .. "/" .. atm_pass, ""):readAll())
 
-            --notification
-            redstone.setOutput("right", true)
-            os.sleep(1)
-            redstone.setOutput("right", false)
-        else
-            for i = 1, 15 do
-                turtle.select(i)
-                turtle.drop()
-            end
+    --if it works then deposit diamonds
+    if res["value"] == 1 then
+        --money has been deposited
+        turtle.turnRight()
+        turtle.turnRight()
+        for i = 1, 15 do
+            turtle.select(i)
+            turtle.dropDown()
+        end
+        turtle.turnLeft()
+        turtle.turnLeft()
+
+        --notification
+        redstone.setOutput("right", true)
+        os.sleep(1)
+        redstone.setOutput("right", false)
+    else
+        for i = 1, 15 do
+            turtle.select(i)
+            turtle.drop()
         end
     end
 end
