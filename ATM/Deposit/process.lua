@@ -1,4 +1,4 @@
-while true
+while true do
 local ip = "http://127.0.0.1/BankAPI/sendfunds/atm/" 
 local atm_pass = "atmpass123"
 local atm_id = 2
