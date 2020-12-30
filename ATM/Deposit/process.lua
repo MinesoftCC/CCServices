@@ -28,7 +28,6 @@ local res = json.decode(http.post(ip..account_name.."/"..total.."/"..atm_id.."/"
 
 --if it works then deposit diamonds
 if res["value"] == 1 then
-    print("was sent")
     turtle.turnRight()
     turtle.turnRight()
     for i=1,15 do
@@ -45,7 +44,7 @@ if res["value"] == 1 then
     --money has been deposited
 else
     for i=1,15 do 
-        turtle.select(1)
+        turtle.select(i)
         turtle.drop() 
     end
 end
