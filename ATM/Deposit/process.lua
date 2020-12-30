@@ -27,7 +27,7 @@ while true do
     end
     
     --optional fee example:
-    total = total*0.98
+    --total = total - (total * 0.015625)
     
     --attempt to send money
     if total ~= 0 then
