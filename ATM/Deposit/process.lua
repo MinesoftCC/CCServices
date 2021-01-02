@@ -1,8 +1,8 @@
+local ip = "http://127.0.0.1/BankAPI/sendfunds/atm/"
+local atm_pass = "atmpass123"
+local atm_id = 2
+local json = require("json")
 while true do
-    local ip = "http://127.0.0.1/BankAPI/sendfunds/atm/"
-    local atm_pass = "atmpass123"
-    local atm_id = 2
-    local json = require("json")
     while not redstone.getInput("back") do
         os.sleep(0.1)
     end
