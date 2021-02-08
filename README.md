@@ -1,5 +1,5 @@
 # CCServices
-programs that interact with the webservers in this repo
+programs that interact with this repo https://github.com/MinesoftCC/CCash
 
 ## Leaderboard (for CCash)
 once a second this program grabs the uranked and aranked results and prints them to the monitors on its right and left
